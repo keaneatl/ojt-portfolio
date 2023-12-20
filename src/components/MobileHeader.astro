@@ -1,0 +1,69 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<Icon
+  name="mdi:close"
+  height="25px"
+  class="cursor-pointer right-5 top-5 absolute close hidden lg:invisible"
+/>
+<Icon
+  name="mdi:menu"
+  height="25px"
+  class="cursor-pointer right-5 top-5 absolute logo menu lg:invisible"
+/>
+
+<header
+  class="mobile flex flex-col justify-start items-center font-black h-screen w-screen hidden lg:invisible"
+>
+  <h3
+    class="m-5 p-[10px] text-2xl border-4 border-solid border-black rounded-lg"
+  >
+    KT
+  </h3>
+  <ul class="text-4xl flex flex-col items-center">
+    <a href="#projects">
+      <li><h2 class="m-1 p-0">Projects</h2></li>
+    </a>
+    <a href="#experience">
+      <li><h2 class="m-1 p-0">Experience</h2></li>
+    </a>
+    <a href="#volunteering">
+      <li><h2 class="m-1 p-0">Volunteering</h2></li>
+    </a>
+    <a href="#certificates">
+      <li><h2 class="m-1 p-0">Certificates</h2></li>
+    </a>
+  </ul>
+  <button class="mt-6 text-2xl border-4 border-solid border-black rounded-lg"
+    ><h3 class="m-0 p-3 text-3xl">Contact Me</h3></button
+  >
+</header>
+
+<script>
+  const closeButton = document.querySelector("svg.close") as SVGAElement;
+  const menuButton = document.querySelector("svg.menu") as SVGAElement;
+  const header = document.querySelector("header.mobile") as Element;
+
+  closeButton.addEventListener("click", () => {
+    // Close header
+    header.classList.toggle("hidden");
+
+    // Make X icon hidden
+    closeButton.classList.toggle("hidden");
+
+    // Make menu icon visible
+    menuButton.classList.toggle("hidden");
+  });
+
+  menuButton.addEventListener("click", () => {
+    // Close header
+    header.classList.toggle("hidden");
+
+    // Make X icon hidden
+    menuButton.classList.toggle("hidden");
+
+    // Make menu icon visible
+    closeButton.classList.toggle("hidden");
+  });
+</script>
