@@ -1,7 +1,7 @@
 ---
 title: Hello, World
 author: Keane Tolentino
-date: October 9, 2023
+date: October 27, 2023
 hours: 8
 task: Microsoft 365 Plans
 ---

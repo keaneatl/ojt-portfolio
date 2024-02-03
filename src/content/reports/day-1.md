@@ -1,4 +1,5 @@
 ---
+slug: day-1
 author: Keane Tolentino
 date: October 9, 2023
 hours: 8

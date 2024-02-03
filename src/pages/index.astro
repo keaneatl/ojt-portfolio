@@ -1,13 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Appendices from "../components/Appendices.astro";
+import Hero from "../components/Hero.astro";
+import Intro from "../components/Intro.astro";
+import Reports from "../components/Reports.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Keane Tolentino">
-	<main>
-		<slot />
-	</main>
+  <Hero />
+  <Intro />
+  <Reports />
+  <Appendices />
 </Layout>
-
-<style>
-	
-</style>

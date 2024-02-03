@@ -1,0 +1,42 @@
+---
+import type { GetStaticPaths, MarkdownInstance } from "astro";
+import Layout from "../../layouts/Layout.astro";
+
+interface Frontmatter {
+  // Define frontmatter props here
+  author: string;
+  date: string;
+  hours: number;
+  task: string;
+  slug: string;
+}
+
+export const getStaticPaths = async () => {
+  const posts: MarkdownInstance<Frontmatter>[] = await Astro.glob(
+    "../../content/reports/*.md"
+  );
+
+  return posts.map((post) => ({
+    params: {
+      slug: post.frontmatter.slug,
+    },
+    props: {
+      post,
+    },
+  }));
+};
+
+const { Content, frontmatter } = Astro.props.post;
+---
+
+<Layout title="✍️ Daily Report">
+  <div
+    class="flex flex-col h-full justify-start items-center pt-20 px-10 md:flex-row md:pt-0 md:h-dvh"
+  >
+    <article>
+      <h1 class="text-4xl font-bold mb-2">{frontmatter.date}</h1>
+      <h3 class="text-lg mb-2">Written by {frontmatter.author}</h3>
+      <Content />
+    </article>
+  </div>
+</Layout>
