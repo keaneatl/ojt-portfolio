@@ -5,7 +5,6 @@ import MobileNav from "../components/MobileNav.astro";
 
 type Props = MarkdownLayoutProps<{
   // Define frontmatter props here
-  title: string;
   author: string;
   date: string;
   hours: number;
@@ -14,19 +13,19 @@ type Props = MarkdownLayoutProps<{
 
 // 1. The frontmatter prop gives access to frontmatter and other data
 const { frontmatter } = Astro.props;
-const { title, author, date, hours, task } = frontmatter;
+const { author, date, hours, task } = frontmatter;
 ---
 
 <html>
   <head>
     <!-- Add other Head elements here, like styles and meta tags. -->
-    <title>✍️ {title}</title>
+    <title>✍️ Daily Report</title>
   </head>
   <body>
     <!-- Add other UI components here, like common headers and footers. -->
     <Nav />
     <MobileNav />
-    <h1>{title} by {author}</h1>
+    <h1>Written by {author}</h1>
     <h2>Task Assigned: {task}</h2>
     <!-- 2. Rendered HTML will be passed into the default slot. -->
     <slot />

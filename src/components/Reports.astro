@@ -1,25 +1,63 @@
 ---
-const reports = await Astro.glob("../content/reports/*.md");
+interface Frontmatter {
+  // Define frontmatter props here
+  author: string;
+  date: string;
+  hours: number;
+  task: string;
+}
+
+const reports = await Astro.glob<Frontmatter>("../content/reports/*.md");
 ---
 
-<div class="bg-transparent h-full flex justify-center items=center">
-  <a
-    href="https://www.animalalliancepledge.org/"
-    target="_blank"
-    class="kill-link-style"
-  >
-    <div
-      class="cursor-pointer move-up-slightly duration-200 shadow-md hover:shadow-xl"
-    >
-      <div class="project-picture rounded-t-2xl h-60 w-full animal-demo"></div>
-      <div
-        class="project-description p-4 py-6 text-3xl font-extrabold text-center text-gray-900 bg-gradient-to-r from-red-300 to-red-400 rounded-b-2xl"
-      >
-        Animal Alliance Pledge
-        <div class="font-bolder mt-2 text-xl">
-          Helping the Planet by Helping Animals
+<div class="p-10">
+  <h1 id="reports" class="text-4xl font-extrabold mb-5">Reports</h1>
+  {reports.forEach((report) => console.log(report.frontmatter))}
+  <div class="grid grid-cols-6 gap-2">
+    {
+      reports.map((report, i) => (
+        <div class="bg-transparent h-full flex flex-col justify-between items-start items=center flex-wrap">
+          <a href={report.file} target="_blank">
+            <div class="report cursor-pointer border-8 border-[#1A1A1A] rounded-lg hover:border-[#8B0000]">
+              <div class="report-num h-40 w-full flex justify-center items-center text-7xl font-extrabold">
+                {i + 1}
+              </div>
+              <div class="report-date p-4 py-6 border-solid border-t-8 border-[#1A1A1A] text-2xl font-extrabold text-center">
+                {report.frontmatter.date}
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
-    </div>
-  </a>
+      ))
+    }
+  </div>
 </div>
+
+<script>
+  const reports = document.querySelectorAll("div.report");
+
+  reports.forEach((report) => {
+    report.addEventListener("mouseenter", (e) => {
+      const r = e.target as HTMLElement;
+      const children = r.children;
+
+      for (let i = 0; i < children.length; i++) {
+        const element = children[i];
+
+        element.classList.toggle("text-[#8B0000]");
+        element.classList.toggle("border-[#8B0000]");
+      }
+    });
+    report.addEventListener("mouseleave", (e) => {
+      const r = e.target as HTMLElement;
+      const children = r.children;
+
+      for (let i = 0; i < children.length; i++) {
+        const element = children[i];
+
+        element.classList.toggle("text-[#8B0000]");
+        element.classList.toggle("border-[#8B0000]");
+      }
+    });
+  });
+</script>

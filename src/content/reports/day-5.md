@@ -1,18 +1,13 @@
 ---
-title: Hello, World
 author: Keane Tolentino
-date: October 9, 2023
+date: October 13, 2023
 hours: 8
-task: Microsoft 365 Plans
+task: LinkedIn AI Course
 ---
 
-# Hi there!
-
-This Markdown file creates a page at `your-domain.com/page-1/`
-
-It probably isn't styled much, but Markdown does support:
-
-- **bold** and _italics._
-- lists
-- [links](https://astro.build)
-- and more!
+We were tasked to take a course entitled “Introduction to Artificial Intelligence” and complete it to
+earn a certification. The course tackled topics such as symbolic systems, Artificial Intelligence (AI),
+Machine Learning (ML), Natural Language Processing (NLP), ML Algorithms, Neural Networks, and
+much more.
+I was able to complete the course by going through the lectures and taking the NASBA CPE exam
+and scoring 100%.

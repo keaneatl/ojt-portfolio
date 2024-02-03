@@ -1,18 +1,10 @@
 ---
-title: Hello, World
 author: Keane Tolentino
 date: October 9, 2023
 hours: 8
-task: Microsoft 365 Plans
+task: Research Microsoft 365 Plans
 ---
 
-# Hi there!
-
-This Markdown file creates a page at `your-domain.com/page-1/`
-
-It probably isn't styled much, but Markdown does support:
-
-- **bold** and _italics._
-- lists
-- [links](https://astro.build)
-- and more!
+I attended the first weekly meeting, and upon getting assigned to make a presentation about the Microsoft or Office 365 plans I began
+conducting my research on the said topic, specifically about the main differences between
+Microsoft 365 subscription and the standard Office licenses.
