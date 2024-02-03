@@ -1,6 +1,10 @@
 ---
-import MobileHeader from "../components/MobileHeader.astro";
-import Header from "../components/Header.astro";
+import MobileNav from "../components/MobileNav.astro";
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
+import Intro from "../components/Intro.astro";
+import Reports from "../components/Reports.astro";
 
 interface Props {
   title: string;
@@ -19,8 +23,12 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="font-sans bg-[#fffcf2]">
-    <Header />
-    <MobileHeader />
+  <body class="font-sans bg-[#f4f6f4]">
+    <Nav />
+    <MobileNav />
+    <Hero />
+    <Intro />
+    <Reports />
+    <Footer />
   </body>
 </html>

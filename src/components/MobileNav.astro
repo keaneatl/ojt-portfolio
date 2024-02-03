@@ -22,28 +22,36 @@ import { Icon } from "astro-icon";
     KT
   </h3>
   <ul class="text-4xl flex flex-col items-center">
-    <a href="#projects">
-      <li><h2 class="m-1 p-0">Projects</h2></li>
+    <a href="#about">
+      <li><h2 class="m-1 p-0">About</h2></li>
     </a>
-    <a href="#experience">
-      <li><h2 class="m-1 p-0">Experience</h2></li>
+    <a
+      href="https://drive.google.com/file/d/1h3hzLpBLJOrfIsRYBnDAWEta3IZlztj5/view?usp=sharing"
+      target="_blank"
+    >
+      <li><h2 class="m-1 p-0">Tech One</h2></li>
     </a>
-    <a href="#volunteering">
-      <li><h2 class="m-1 p-0">Volunteering</h2></li>
+    <a href="#reports">
+      <li><h2 class="m-1 p-0">Reports</h2></li>
     </a>
-    <a href="#certificates">
-      <li><h2 class="m-1 p-0">Certificates</h2></li>
+    <a href="#appendices">
+      <li><h2 class="m-1 p-0">Appendices</h2></li>
     </a>
   </ul>
-  <button class="mt-6 text-2xl border-4 border-solid border-black rounded-lg"
-    ><h3 class="m-0 p-3 text-3xl">Contact Me</h3></button
+  <a
+    href="https://drive.google.com/uc?export=download&id=14yhPQFd7hCJ0vfuMaa3uC44LaaCf8N-h"
   >
+    <button class="mt-6 text-2xl border-4 border-solid border-black rounded-lg"
+      ><h3 class="m-0 p-3 text-3xl">Download Resume</h3></button
+    >
+  </a>
 </header>
 
 <script>
   const closeButton = document.querySelector("svg.close") as SVGAElement;
   const menuButton = document.querySelector("svg.menu") as SVGAElement;
   const header = document.querySelector("header.mobile") as Element;
+  const footer = document.querySelector("footer");
 
   closeButton.addEventListener("click", () => {
     // Close header
@@ -54,6 +62,9 @@ import { Icon } from "astro-icon";
 
     // Make menu icon visible
     menuButton.classList.toggle("hidden");
+
+    // Make footer invisible
+    footer?.classList.toggle("hidden");
   });
 
   menuButton.addEventListener("click", () => {
@@ -65,5 +76,8 @@ import { Icon } from "astro-icon";
 
     // Make menu icon visible
     closeButton.classList.toggle("hidden");
+
+    // Make footer visible
+    footer?.classList.toggle("hidden");
   });
 </script>

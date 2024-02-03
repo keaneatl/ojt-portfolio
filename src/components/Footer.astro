@@ -1,0 +1,32 @@
+---
+import astro from "../../public/astro-logo-dark.png";
+---
+
+<footer
+  class="absolute m-5 top-0 left-0 md:bottom-0 md:right-0 md:top-auto md:left-auto"
+>
+  <strong
+    >Made with <a
+      href="https://www.github.com/keaneatl/ojt-portfolio"
+      target="_blank"
+      ><img
+        src={astro.src}
+        alt="A picture of the Philippine flag."
+        class="w-32 inline"
+      /></a
+    ></strong
+  >
+</footer>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const footer = document.querySelector("footer") as HTMLElement;
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 500) {
+      footer.style.visibility = "hidden";
+    } else {
+      footer.style.visibility = "visible";
+    }
+  });
+</script>

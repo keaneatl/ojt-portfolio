@@ -1,0 +1,60 @@
+<header
+  class="main fixed hidden flex-row justify-around items-center font-black w-screen top-0 lg:flex"
+>
+  <div class="flex flex-row justify-center">
+    <h3
+      class="logo m-5 p-[10px] text-2xl border-4 border-solid border-black rounded-lg xl:text-3xl"
+    >
+      KT
+    </h3>
+    <ul
+      class="text-xl flex flex-row justify-center items-center xl:text-[1.7rem]"
+    >
+      <a href="#about">
+        <li><h2 class="mx-5 p-0">About</h2></li>
+      </a>
+      <a
+        href="https://drive.google.com/file/d/1h3hzLpBLJOrfIsRYBnDAWEta3IZlztj5/view?usp=sharing"
+        target="_blank"
+      >
+        <li><h2 class="mx-5 p-0">Tech One</h2></li>
+      </a>
+      <a href="#reports">
+        <li><h2 class="mx-5 p-0">Reports</h2></li>
+      </a>
+      <a href="#appendices">
+        <li><h2 class="mx-5 p-0">Appendices</h2></li>
+      </a>
+    </ul>
+  </div>
+  <a
+    href="https://drive.google.com/uc?export=download&id=14yhPQFd7hCJ0vfuMaa3uC44LaaCf8N-h"
+  >
+    <button class="contact border-4 border-solid border-black rounded-lg"
+      ><h3 class="m-0 p-3 text-xl xl:text-[1.7rem]">Download Resume</h3></button
+    >
+  </a>
+</header>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const contactButton = document.querySelector(
+      "button.contact"
+    ) as HTMLElement;
+    const header = document.querySelector("header.main") as HTMLElement;
+    const logo = document.querySelector("h3.logo") as HTMLElement;
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 100) {
+      header.style.backgroundColor = "#1A1A1A";
+      header.style.color = "#f4f6f4";
+      logo.style.borderColor = "#f4f6f4";
+      contactButton.style.borderColor = "#f4f6f4";
+    } else {
+      header.style.backgroundColor = "transparent";
+      header.style.color = "black";
+      logo.style.borderColor = "black";
+      contactButton.style.borderColor = "black";
+    }
+  });
+</script>
