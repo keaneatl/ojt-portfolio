@@ -1,7 +1,8 @@
 ---
+slug: day-5
 author: Keane Tolentino
 date: October 13, 2023
-hours: 8
+hours: 53
 task: LinkedIn AI Course
 ---
 

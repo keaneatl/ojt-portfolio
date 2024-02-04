@@ -22,7 +22,7 @@ const reports = await Astro.glob<Frontmatter>("../content/reports/*.md");
       )
       .forEach((report) => console.log(report.frontmatter.date))
   } -->
-  <div class="grid justify-self-center gap-2 grid-flow-row md:grid-cols-6">
+  <div class="grid gap-2 grid-flow-row md:grid-cols-6">
     {
       reports
         .sort(

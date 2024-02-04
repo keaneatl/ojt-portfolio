@@ -1,7 +1,8 @@
 ---
+slug: day-3
 author: Keane Tolentino
 date: October 11, 2023
-hours: 9
+hours: 36
 task: Research Microsoft 365 Plans
 ---
 

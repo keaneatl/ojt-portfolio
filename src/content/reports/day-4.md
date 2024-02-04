@@ -1,7 +1,8 @@
 ---
+slug: day-4
 author: Keane Tolentino
 date: October 12, 2023
-hours: 9
+hours: 45
 task: Microsoft 365 Presentation
 ---
 

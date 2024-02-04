@@ -2,7 +2,7 @@
 slug: day-2
 author: Keane Tolentino
 date: October 10, 2023
-hours: 9
+hours: 27
 task: Research Microsoft 365 Plans
 ---
 
